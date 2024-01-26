@@ -1,13 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  margin-top: 15rem;
+  max-width: 70rem;
+  border-radius: 15px;
+  gap: 2.5rem;
+}
+
+.friendList {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-photo {
+  width: 3.6rem;
+  border-radius: 15px;
+  margin-left: 0.6rem;
+}
+
+.user {
+  display: flex;
+  padding: 0.6rem;
+  gap: 1.6rem;
+  background-color: #ffe8cc;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.select-button {
+  margin-left: auto;
+  border-radius: 9px;
+  height: 3rem;
+}
+
+.bills-container {
+  background-color: #ffe8cc;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  border-radius: 9px;
+  gap: 1rem;
+}
+
+.label-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.readonly {
+  background-color: #ffe8cc;
+  border: 0.5px solid;
+}
+
+input,
+select {
+  width: 8rem;
+  background-color: #fff4e6;
+  border: 0.2px solid;
+}
+
+h2 {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+button {
+  background-color: #fd7e14;
+  color: #fff4e6;
+  border: none;
+  width: 8rem;
+  font-weight: 550;
+  margin-left: auto;
+  border-radius: 6px;
+  font-size: 0.1px;
+}
+
+.split {
+  width: 8rem;
+  padding: 0.5rem 0.9rem;
+  font-weight: 550;
+  margin-left: auto;
+  margin-top: 1.2rem;
+}
+
+button:hover {
+  background-color: #ff922b;
 }
