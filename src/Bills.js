@@ -8,6 +8,7 @@ export function Bills({
   setStatus,
 }) {
   const [yourBill, setYourBill] = useState("");
+  const [selectedOption, setSelectedOption] = useState("You");
 
   function handleYourBill(e) {
     setYourBill(e.target.value);
@@ -21,6 +22,17 @@ export function Bills({
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            let newOwes = "";
+            if (selectedOption === "You") {
+              newOwes = `${getActiveUserName} owes you ${bill}$`;
+            } else if (selectedOption === getActiveUserName) {
+              newOwes = `You owe ${getActiveUserName} ${bill}$`;
+            }
+
+            setStatus((prevStatus) => ({
+              ...prevStatus,
+              [getActiveUserName]: newOwes,
+            }));
             setYourBill("");
             setBill("");
           }}
@@ -51,12 +63,16 @@ export function Bills({
             </div>
             <div className="label-space">
               <label>😱 Who is paing the bill</label>
-              <select onChange={(e) => {}}>
+              <select
+                onChange={(e) => {
+                  setSelectedOption(e.target.value);
+                }}
+              >
                 <option value="You">You</option>
                 <option value={getActiveUserName}>{getActiveUserName}</option>
               </select>
             </div>
-            <button className="split">Split bills</button>
+            <button className="split-button">Split bills</button>
           </div>
         </form>
       )}

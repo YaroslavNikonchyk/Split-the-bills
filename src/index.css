@@ -56,8 +56,6 @@ html {
 
 .select-button {
   margin-left: auto;
-  border-radius: 9px;
-  height: 3rem;
 }
 
 .add-friend {
@@ -76,15 +74,15 @@ html {
 
 .add {
   width: 18rem;
+  height: 2.5rem;
   margin-top: 1.2rem;
   padding: 0.3rem 0;
 }
 
 .close {
-  margin-left: 70%;
+  margin-left: 71.8%;
   margin-top: 1.2rem;
   margin-right: 2rem;
-  padding: 0.3rem 0.6rem;
 }
 
 .bills-container {
@@ -94,7 +92,7 @@ html {
   padding: 2rem 4rem;
   border-radius: 9px;
   gap: 1rem;
-  height: 24rem;
+  height: 25rem;
 }
 
 .label-space {
@@ -125,19 +123,18 @@ button {
   background-color: #fd7e14;
   color: #fff4e6;
   border: none;
-  width: 8rem;
+  width: 9rem;
+  height: 3rem;
   font-weight: 550;
   margin-left: auto;
-  border-radius: 6px;
+  border-radius: 9px;
   font-size: 0.1px;
+  padding: 0.5rem 0.9rem;
 }
 
-.split {
-  width: 8rem;
-  padding: 0.5rem 0.9rem;
-  font-weight: 550;
+.split-button {
   margin-left: auto;
-  margin-top: 1.2rem;
+  margin-top: 1.6rem;
 }
 
 button:hover {
