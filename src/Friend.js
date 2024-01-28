@@ -1,12 +1,17 @@
-export function Friend({ name, URL }) {
+export function Friend({ name, url, selected, setActiveUser, status }) {
   return (
-    <div className="user">
-      <img src={URL} alt={name} className="user-photo" />
+    <div
+      className="user"
+      style={{ backgroundColor: selected ? "#ffe8cc" : "#fff" }}
+    >
+      <img src={url} alt="avatar" className="user-photo" />
       <div>
         <h3>{name}</h3>
-        <span>X</span>
+        <span>{status}</span>
       </div>
-      <button className="select-button">Select</button>
+      <button className="select-button" onClick={setActiveUser}>
+        {selected ? "Close" : "Select"}
+      </button>
     </div>
   );
 }
