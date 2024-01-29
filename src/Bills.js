@@ -6,6 +6,7 @@ export function Bills({
   handleBill,
   setBill,
   setStatus,
+  setSelected,
 }) {
   const [yourBill, setYourBill] = useState("");
   const [selectedOption, setSelectedOption] = useState("You");
@@ -35,6 +36,7 @@ export function Bills({
             }));
             setYourBill("");
             setBill("");
+            setSelected(null);
           }}
         >
           <div className="bills-container">

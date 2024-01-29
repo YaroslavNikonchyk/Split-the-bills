@@ -51,6 +51,7 @@ export function App() {
         users={users}
         name={name}
         selected={selected}
+        setSelected={setSelected}
         getActiveUserName={getActiveUserName()}
         bill={bill}
         setBill={setBill}
