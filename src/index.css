@@ -85,6 +85,11 @@ html {
   margin-right: 2rem;
 }
 
+.delete-button {
+  margin-left: -3.5rem;
+  cursor: pointer;
+}
+
 .bills-container {
   background-color: #ffe8cc;
   display: flex;

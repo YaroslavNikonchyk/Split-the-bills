@@ -1,13 +1,24 @@
-export function Friend({ name, url, selected, setActiveUser, status }) {
+export function Friend({
+  name,
+  url,
+  selected,
+  setActiveUser,
+  status,
+  deleteUser,
+  user,
+}) {
   return (
     <div
       className="user"
       style={{ backgroundColor: selected ? "#ffe8cc" : "#fff" }}
     >
+      <span className="delete-button" onClick={() => deleteUser(user)}>
+        ❌
+      </span>
       <img
         src={
           url ||
-          "https://sportishka.com/uploads/posts/2021-11/1638261879_32-sportishka-com-p-nakachennii-negr-krasivie-foto-silovie-vid-34.jpg"
+          "https://www.marketingmuses.com/wp-content/uploads/2018/01/invis-user.png"
         }
         alt="avatar"
         className="user-photo"

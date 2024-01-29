@@ -10,6 +10,12 @@ export function App() {
   const [bill, setBill] = useState("");
   const [status, setStatus] = useState("");
 
+  function deleteUser(user) {
+    const newUsers = users.filter((toDelete) => toDelete !== user);
+    setUsers(newUsers);
+    setSelected(null);
+  }
+
   function handleBill(e) {
     setBill(e.target.value);
   }
@@ -37,6 +43,7 @@ export function App() {
           bill={bill}
           status={status}
           setStatus={setStatus}
+          deleteUser={deleteUser}
         />
         <AddFriend addNewUser={addNewUser} name={name} setName={setName} />
       </div>

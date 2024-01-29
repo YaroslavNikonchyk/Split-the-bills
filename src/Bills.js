@@ -24,9 +24,9 @@ export function Bills({
             e.preventDefault();
             let newOwes = "";
             if (selectedOption === "You") {
-              newOwes = `${getActiveUserName} owes you ${bill}$`;
+              newOwes = `${getActiveUserName} owes you ${friendsBill}$`;
             } else if (selectedOption === getActiveUserName) {
-              newOwes = `You owe ${getActiveUserName} ${bill}$`;
+              newOwes = `You owe ${getActiveUserName} ${bill - yourBill}$`;
             }
 
             setStatus((prevStatus) => ({
